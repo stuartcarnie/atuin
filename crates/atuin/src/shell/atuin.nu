@@ -36,7 +36,7 @@ let _atuin_pre_prompt = {||
         return
     }
     with-env { ATUIN_LOG: error } {
-        if (version).minor >= 111 or (version).major > 0 {
+        if (version).minor >= 112 or (version).major > 0 {
             job spawn -d atuin {
                 ^atuin history end $'--exit=($env.LAST_EXIT_CODE)' -- $env.ATUIN_HISTORY_ID | complete
             } | ignore
